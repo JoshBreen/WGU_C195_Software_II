@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="380.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.AddCustomerWindowController">
+   <children>
+      <Label fx:id="addCustomerLbl" layoutX="14.0" layoutY="14.0" text="Add Customer">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="custNameLBL" layoutX="47.0" layoutY="57.0" text="Customer Name" />
+      <TextField fx:id="custNameTB" layoutX="188.0" layoutY="57.0" />
+      <Label fx:id="addressLBL" layoutX="47.0" layoutY="92.0" text="Address" />
+      <TextField fx:id="addressTB" layoutX="188.0" layoutY="92.0" />
+      <Label fx:id="postalCodeLBL" layoutX="47.0" layoutY="130.0" text="Postal Code" />
+      <TextField fx:id="postalCodeTB" layoutX="188.0" layoutY="130.0" />
+      <Label fx:id="phoneNumLBL" layoutX="47.0" layoutY="170.0" text="Phone Number" />
+      <TextField fx:id="phoneNumTB" layoutX="188.0" layoutY="170.0" />
+      <Label fx:id="countryLBL" layoutX="47.0" layoutY="216.0" text="Country" />
+      <ComboBox fx:id="countryCmbBox" layoutX="188.0" layoutY="216.0" onAction="#selectCountryForSP" prefWidth="150.0" promptText="Select Country" />
+      <Label fx:id="stateProvLBL" layoutX="47.0" layoutY="257.0" text="State/Province" />
+      <ComboBox fx:id="spComboBox" disable="true" layoutX="188.0" layoutY="257.0" onAction="#getDivIDFromDB" prefWidth="150.0" promptText="Select Country First" />
+      <Button fx:id="saveAddCustBtn" layoutX="200.0" layoutY="342.0" mnemonicParsing="false" onAction="#saveAddCustomer" text="Save" />
+      <Button fx:id="exitAddCstBtn" layoutX="300.0" layoutY="342.0" mnemonicParsing="false" onAction="#exitAddCustomer" text="Exit" />
+      <Label fx:id="addCustErrorLbl" layoutX="188.0" layoutY="299.0" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="500.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ModAppointmentWindowController">
+    <children>
+        <Label fx:id="modApptHeaderLbl" layoutX="14.0" layoutY="14.0" text="Mod Appointment">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Label>
+        <Label fx:id="modApptTitleLbl" layoutX="20.0" layoutY="116.0" text="Title" />
+        <TextField fx:id="modApptTitleTB" layoutX="175.0" layoutY="112.0" />
+        <Label fx:id="modApptDescLbl" layoutX="20.0" layoutY="148.0" text="Description" />
+        <TextField fx:id="modApptDescTB" layoutX="175.0" layoutY="144.0" />
+        <Label fx:id="modApptLocLbl" layoutX="20.0" layoutY="183.0" text="Location" />
+        <TextField fx:id="modApptLocatTB" layoutX="175.0" layoutY="179.0" />
+        <Label fx:id="modApptTypeLbl" layoutX="20.0" layoutY="217.0" text="Type" />
+        <TextField fx:id="modApptTypeTB" layoutX="175.0" layoutY="213.0" />
+        <Label fx:id="modApptStartDateLbl" layoutX="20.0" layoutY="250.0" text="Start Date" />
+        <ComboBox fx:id="modAptStartTimeCmb" layoutX="175.0" layoutY="284.0" prefWidth="150.0" />
+        <DatePicker fx:id="modApptStartDatePicker" layoutX="175.0" layoutY="246.0" />
+        <Label fx:id="modApptStartTimeLbl" layoutX="20.0" layoutY="287.0" text="Start Time" />
+        <Label fx:id="modApptEndDateLbl" layoutX="20.0" layoutY="322.0" text="End Date" />
+        <ComboBox fx:id="modApptEndTimeCmb" layoutX="175.0" layoutY="356.0" prefWidth="150.0" />
+        <DatePicker fx:id="modApptEndDatePicker" layoutX="175.0" layoutY="318.0" />
+        <Label fx:id="modApptEndTimeLbl" layoutX="20.0" layoutY="359.0" text="End Time" />
+        <ComboBox fx:id="modApptCustCmb" layoutX="175.0" layoutY="77.0" prefWidth="150.0" />
+        <Label fx:id="modApptCustomerLbl" layoutX="20.0" layoutY="80.0" text="Customer" />
+        <ComboBox fx:id="modApptContactCmb" layoutX="175.0" layoutY="391.0" prefWidth="150.0" />
+        <Label fx:id="modApptContactLbl" layoutX="20.0" layoutY="394.0" text="Contact" />
+        <Button fx:id="modApptSaveBtn" layoutX="200.0" layoutY="464.0" mnemonicParsing="false" onAction="#saveModAppointment" text="Save" />
+        <Button fx:id="modApptExitBtn" layoutX="325.0" layoutY="464.0" mnemonicParsing="false" onAction="#exitModAppointment" text="Exit" />
+        <Label fx:id="modApptErrorLbl" contentDisplay="CENTER" layoutX="22.0" layoutY="440.0" textAlignment="CENTER" wrapText="true" />
+      <Label fx:id="modApptID" layoutX="20.0" layoutY="48.0" text="Appointment ID" />
+      <TextField fx:id="modApptIDTB" disable="true" editable="false" layoutX="175.0" layoutY="44.0" />
+    </children>
+</AnchorPane>

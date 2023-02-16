@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="380.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ModifyCustomerWindowController">
+    <children>
+        <Label fx:id="modCustomerLbl" layoutX="14.0" layoutY="14.0" text="Modify Customer">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Label>
+        <Label fx:id="custNameLBL" layoutX="47.0" layoutY="84.0" text="Customer Name" />
+        <TextField fx:id="custNameTB" layoutX="188.0" layoutY="84.0" />
+        <Label fx:id="addressLBL" layoutX="47.0" layoutY="115.0" text="Address" />
+        <TextField fx:id="addressTB" layoutX="188.0" layoutY="115.0" />
+        <Label fx:id="postalCodeLBL" layoutX="47.0" layoutY="157.0" text="Postal Code" />
+        <TextField fx:id="postalCodeTB" layoutX="188.0" layoutY="157.0" />
+        <Label fx:id="phoneNumLBL" layoutX="47.0" layoutY="197.0" text="Phone Number" />
+        <TextField fx:id="phoneNumTB" layoutX="188.0" layoutY="197.0" />
+        <Label fx:id="countryLBL" layoutX="47.0" layoutY="243.0" text="Country" />
+        <ComboBox fx:id="countryCmbBox" layoutX="188.0" layoutY="243.0" onAction="#selectCountryForSP" prefWidth="150.0" promptText="Select Country" />
+        <Label fx:id="stateProvLBL" layoutX="47.0" layoutY="279.0" text="State/Province" />
+        <ComboBox fx:id="spComboBox" layoutX="188.0" layoutY="279.0" onAction="#getDivIDFromDB" prefWidth="150.0" promptText="Select Country First" />
+        <Button fx:id="saveModCustBtn" layoutX="200.0" layoutY="363.0" mnemonicParsing="false" onAction="#saveModCustomer" text="Save" />
+        <Button fx:id="exitModCstBtn" layoutX="300.0" layoutY="363.0" mnemonicParsing="false" onAction="#exitModCustomer" text="Exit" />
+      <Label fx:id="modCustErrorLbl" layoutX="186.0" layoutY="328.0" />
+      <Label fx:id="custIDLbl" layoutX="47.0" layoutY="48.0" text="Customer ID" />
+      <TextField fx:id="custIDTB" disable="true" editable="false" layoutX="188.0" layoutY="44.0" />
+    </children>
+</AnchorPane>

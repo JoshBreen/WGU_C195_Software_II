@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="800.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.MainWindowController">
+   <children>
+      <Label fx:id="mainTitleLbl" layoutX="26.0" layoutY="27.0" text="Scheduling">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="upcomeApptLbl" layoutX="26.0" layoutY="63.0" text="Upcoming Appointments:" />
+      <Label fx:id="sortLbl" layoutX="1097.0" layoutY="288.0" text="Sort:" />
+      <TableView fx:id="reportTable" layoutX="26.0" layoutY="468.0" prefHeight="307.0" prefWidth="1027.0">
+         <columns>
+            <TableColumn fx:id="rptCol1" prefWidth="75.0" text="Contact" />
+            <TableColumn fx:id="rptCol2" prefWidth="75.0" text="Appt ID" />
+            <TableColumn fx:id="rptCol3" prefWidth="75.0" text="Title" />
+            <TableColumn fx:id="rptCol4" prefWidth="75.0" text="Description" />
+            <TableColumn fx:id="rptCol5" prefWidth="75.0" text="Location" />
+            <TableColumn fx:id="rptCol6" prefWidth="75.0" text="Type" />
+            <TableColumn fx:id="rptCol7" prefWidth="75.0" text="Start Date" />
+            <TableColumn fx:id="rptCol8" prefWidth="75.0" text="Start Time" />
+            <TableColumn fx:id="rptCol9" prefWidth="75.0" text="End Date" />
+            <TableColumn fx:id="rptCol10" prefWidth="75.0" text="End Time" />
+         </columns>
+      </TableView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f8fafc00" height="158.0" layoutX="1077.0" layoutY="87.0" stroke="BLACK" strokeDashOffset="10.0" strokeLineJoin="ROUND" strokeType="INSIDE" width="196.0" />
+      <Label fx:id="customerLbl" layoutX="1097.0" layoutY="102.0" text="Customer">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Button fx:id="addCustomerButton" layoutX="1097.0" layoutY="130.0" mnemonicParsing="false" onAction="#openAddCustomer" text="Add Customer" />
+      <Button fx:id="modCustomerButton" layoutX="1097.0" layoutY="165.0" mnemonicParsing="false" onAction="#openModCustomer" text="Modify Customer" />
+      <Button fx:id="deleteCustomerButton" layoutX="1097.0" layoutY="200.0" mnemonicParsing="false" onAction="#deleteCustomer" text="Delete Customer" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f8fafc00" height="184.0" layoutX="1077.0" layoutY="256.0" stroke="BLACK" strokeDashOffset="10.0" strokeLineJoin="ROUND" strokeType="INSIDE" width="196.0" />
+      <RadioButton fx:id="monthRadio" layoutX="1130.0" layoutY="288.0" mnemonicParsing="false" onAction="#showMonthView" selected="true" text="Month">
+         <toggleGroup>
+            <ToggleGroup fx:id="monthWeekGroup" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="weekRadio" layoutX="1130.0" layoutY="309.0" mnemonicParsing="false" onAction="#showWeekView" text="Week" toggleGroup="$monthWeekGroup" />
+      <Label fx:id="apptLbl" layoutX="1097.0" layoutY="266.0" text="Appointment">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Button fx:id="addApptButton" layoutX="1097.0" layoutY="332.0" mnemonicParsing="false" onAction="#openAddAppt" text="Add Appointment" />
+      <Button fx:id="modApptButton" layoutX="1097.0" layoutY="367.0" mnemonicParsing="false" onAction="#openModAppt" text="Modify Appointment" />
+      <Button fx:id="deleteApptButton" layoutX="1097.0" layoutY="402.0" mnemonicParsing="false" onAction="#deleteAppointment" text="Delete Appointment" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f8fafc00" height="158.0" layoutX="1077.0" layoutY="462.0" stroke="BLACK" strokeDashOffset="10.0" strokeLineJoin="ROUND" strokeType="INSIDE" width="196.0" />
+      <Label fx:id="rptLbl" layoutX="1097.0" layoutY="472.0" text="Reports">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <RadioButton fx:id="customerApptRadio" layoutX="1097.0" layoutY="499.0" mnemonicParsing="false" onAction="#typeReport" selected="true" text="Appointment Types">
+         <toggleGroup>
+            <ToggleGroup fx:id="reportGroup" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="pastReportRadio" layoutX="1097.0" layoutY="549.0" mnemonicParsing="false" onAction="#pastAppointments" text="Past Appointments" toggleGroup="$reportGroup" />
+      <RadioButton fx:id="contactScheduleRadio" layoutX="1097.0" layoutY="524.0" mnemonicParsing="false" onAction="#contactReport" text="Contact Schedule" toggleGroup="$reportGroup" />
+      <Button fx:id="exitButton" layoutX="1230.0" layoutY="750.0" mnemonicParsing="false" text="Exit" />
+      <TabPane layoutX="26.0" layoutY="84.0" prefHeight="337.0" prefWidth="1027.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab fx:id="apptTabLbl" text="Appointments">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="scheduleTable" prefHeight="307.0" prefWidth="1027.0">
+                          <columns>
+                            <TableColumn fx:id="apptIDCol" prefWidth="75.0" text="Appt ID" />
+                            <TableColumn fx:id="apptTitleCol" prefWidth="75.0" text="Title" />
+                              <TableColumn fx:id="descriptionCol" prefWidth="75.0" text="Description" />
+                              <TableColumn fx:id="apptLocCol" prefWidth="75.0" text="Location" />
+                              <TableColumn fx:id="apptConCol" prefWidth="75.0" text="Contact" />
+                              <TableColumn fx:id="apptTypeCol" prefWidth="75.0" text="Type" />
+                              <TableColumn fx:id="startDateCol" prefWidth="75.0" text="Start Date" />
+                              <TableColumn fx:id="startTimeCol" prefWidth="75.0" text="Start Time" />
+                              <TableColumn fx:id="endDateCol" prefWidth="75.0" text="End Date" />
+                              <TableColumn fx:id="endTimeCol" prefWidth="75.0" text="End Time" />
+                              <TableColumn fx:id="customerIDApptCol" prefWidth="75.0" text="Customer ID" />
+                              <TableColumn fx:id="customerNameAppt" prefWidth="75.0" text="Customer Name" />
+                              <TableColumn fx:id="userNameAppt" prefWidth="75.0" text="User" />
+                          </columns>
+                        </TableView>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+          <Tab fx:id="custTabLbl" text="Customers">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="custTable" prefHeight="313.0" prefWidth="1027.0">
+                          <columns>
+                              <TableColumn fx:id="cIdCustCol" prefWidth="75.0" text="Customer ID" />
+                            <TableColumn fx:id="nameCustCol" prefWidth="75.0" text="Name" />
+                            <TableColumn fx:id="addressCustCol" prefWidth="75.0" text="Address" />
+                              <TableColumn fx:id="postalCodeCust" prefWidth="75.0" text="Postal Code" />
+                              <TableColumn fx:id="phoneCustCol" prefWidth="75.0" text="Phone Number" />
+                              <TableColumn fx:id="spCustCol" prefWidth="75.0" text="State/Province" />
+                              <TableColumn fx:id="countCustCol" prefWidth="75.0" text="Country" />
+                          </columns>
+                        </TableView>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="500.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.AddAppointmentWindowController">
+   <children>
+      <Label fx:id="addAppHeaderLbl" layoutX="14.0" layoutY="14.0" text="Add Appointment">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="addApptTitleLbl" layoutX="50.0" layoutY="90.0" text="Title" />
+      <TextField fx:id="addApptTitleTB" layoutX="151.0" layoutY="86.0" />
+      <Label fx:id="addApptDescLbl" layoutX="50.0" layoutY="122.0" text="Description" />
+      <TextField fx:id="addApptDescTB" layoutX="151.0" layoutY="118.0" />
+      <Label fx:id="addApptLocLbl" layoutX="50.0" layoutY="157.0" text="Location" />
+      <TextField fx:id="addApptLocatTB" layoutX="151.0" layoutY="153.0" />
+      <Label fx:id="addApptTypeLbl" layoutX="50.0" layoutY="191.0" text="Type" />
+      <TextField fx:id="addApptTypeTB" layoutX="151.0" layoutY="187.0" />
+      <Label fx:id="addApptStartDateLbl" layoutX="50.0" layoutY="224.0" text="Start Date" />
+      <ComboBox fx:id="addAptStartTimeCmb" layoutX="151.0" layoutY="258.0" prefWidth="150.0" />
+      <DatePicker fx:id="addApptStartDatePicker" layoutX="151.0" layoutY="220.0" />
+      <Label fx:id="addApptStartTimeLbl" layoutX="50.0" layoutY="261.0" text="Start Time" />
+      <Label fx:id="addApptEndDateLbl" layoutX="50.0" layoutY="296.0" text="End Date" />
+      <ComboBox fx:id="addApptEndTimeCmb" layoutX="151.0" layoutY="330.0" prefWidth="150.0" />
+      <DatePicker fx:id="addApptEndDatePicker" layoutX="151.0" layoutY="292.0" />
+      <Label fx:id="addApptEndTimeLbl" layoutX="50.0" layoutY="333.0" text="End Time" />
+      <ComboBox fx:id="addApptCustCmb" layoutX="153.0" layoutY="51.0" prefWidth="150.0" />
+      <Label fx:id="addApptCustomerLbl" layoutX="50.0" layoutY="54.0" text="Customer" />
+      <ComboBox fx:id="addApptContactCmb" layoutX="152.0" layoutY="365.0" prefWidth="150.0" />
+      <Label fx:id="addApptContactLbl" layoutX="50.0" layoutY="368.0" text="Contact" />
+      <Button fx:id="addApptSaveBtn" layoutX="200.0" layoutY="440.0" mnemonicParsing="false" onAction="#saveNewAppointment" text="Save" />
+      <Button fx:id="addApptExitBtn" layoutX="325.0" layoutY="440.0" mnemonicParsing="false" onAction="#exitAddAppointment" text="Exit" />
+      <Label fx:id="addApptErrorLbl" layoutX="22.0" layoutY="410.0" textAlignment="CENTER" />
+   </children>
+</AnchorPane>
