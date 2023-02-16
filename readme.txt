@@ -3,7 +3,6 @@ BreenScheduling Program
 Used to view upcoming schedule of appointments. Add appointments, and customers. Modify appointments and customers.
 
 Josh Breen
-jbreen9@wgu.edu
 Version 1.019
 07/12/2021
 
